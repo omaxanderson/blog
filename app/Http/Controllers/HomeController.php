@@ -32,4 +32,9 @@ class HomeController extends Controller
       $posts = Post::all();
       return view('posts', compact('posts'));
     }
+
+    public function displayPost($post_id) {
+      $post = Post::find($post_id)->get()[0];
+      return view('post', compact('post'));
+    }
 }

@@ -20,6 +20,7 @@ Route::get('/home', function() {
 });
 
 Route::get('/posts', "HomeController@showPostPage")->middleware('guest');
+Route::get('/posts/{postId}', "HomeController@displayPost");
 
 Auth::routes();
 Route::get('/admin', function() {

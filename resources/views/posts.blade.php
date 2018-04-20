@@ -4,7 +4,9 @@
 <div class='col-sm-6 offset-sm-3'>
   @php
     foreach ($posts as $post) {
-      echo "<div class='card'>";
+      echo "<a href='/posts/";
+      echo $post->id;
+      echo "'><div class='card mb-3'>";
       echo "<div class='card-header'>";
         echo $post->title;
       echo "</div>";
@@ -15,6 +17,7 @@
       echo "</p><p>";
       echo $post->abstract;
       echo "</p></div></div>";
+      echo "</a>";
     }
 
   @endphp
