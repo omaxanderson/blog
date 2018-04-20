@@ -20,13 +20,24 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-nav navbar-expand-sm navbar-light bg-light">
+        <nav class="navbar navbar-nav navbar-expand-sm navbar-dark bg-dark justify-content-between sticky-top">
             <!-- Branding Image -->
-            <div class='ml-3'>
-              <a class="navbar-brand" href="{{ url('/posts') }}">Home</a>
+            <a class="navbar-brand ml-3" href="{{ url('/posts') }}"></a>
 
-
+            <div class='collapse navbar-collapse d-flex justify-content-end'>
+              <ul class='navbar-nav'>
+                <li class='nav-item mx-2'>
+                  <a class='nav-link' href='/about'>About</a>
+                </li>
+                <li class='nav-item mx-2'>
+                  <a class='nav-link' href='/contact'>Contact</a>
+                </li>
+              </ul>
+              <form class='form-inline ml-3' action='/search' method='get'>
+                <input class='form-control mr-2' type='search' name='q' placeholder='Search posts' aria-label='Search posts'>
+                <button class='btn btn-outline-info' type='submit'>Search</button>
             </div>
+
         </nav>
         <div class='container mt-3'>
           @yield('content')
