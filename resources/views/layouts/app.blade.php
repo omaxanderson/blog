@@ -22,7 +22,7 @@
     <div id="app">
         <nav class="navbar navbar-nav navbar-expand-sm navbar-dark bg-dark justify-content-between sticky-top">
             <!-- Branding Image -->
-            <a class="navbar-brand ml-3" href="{{ url('/posts') }}"></a>
+            <a class="navbar-brand ml-3" href="{{ url('/posts') }}">A Coders's Life</a>
 
             <div class='collapse navbar-collapse d-flex justify-content-end'>
               <ul class='navbar-nav'>

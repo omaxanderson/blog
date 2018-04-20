@@ -21,6 +21,7 @@ Route::get('/home', function() {
 
 Route::get('/posts', "HomeController@showPostPage")->middleware('guest');
 Route::get('/posts/{postId}', "HomeController@displayPost");
+Route::get('/search', "HomeController@showPostPage");
 
 Auth::routes();
 Route::get('/admin', function() {

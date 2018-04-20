@@ -2,6 +2,9 @@
 
 @section('content')
 <div class='col-sm-6 offset-sm-3'>
+
+  <p id='searchMessage'>{{ $searchMessage }}</p>
+
   @php
     foreach ($posts as $post) {
       echo "<a href='/posts/";
