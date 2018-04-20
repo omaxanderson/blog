@@ -21,6 +21,7 @@ class CreatePostsTable extends Migration
             $table->longtext('content');
             $table->date('created_at');
             $table->date('updated_at')->nullable();
+            $table->integer('views');
 
             // Foreign keys
             $table->integer('user_id');

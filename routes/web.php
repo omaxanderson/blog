@@ -11,12 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', "HomeController@showPostPage");
 
 Route::get('/home', function() {
   return view('home');
+});
+
+Route::get('/about', function() {
+  return view('about');
+});
+
+Route::get('/contact', function() {
+  return view('contact');
 });
 
 Route::get('/posts', "HomeController@showPostPage")->middleware('guest');

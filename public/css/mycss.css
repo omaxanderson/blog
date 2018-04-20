@@ -1,0 +1,13 @@
+.post_link {
+  color: black;
+}
+
+.post_link:hover {
+  text-decoration: none;
+  color: black;
+  box-shadow: 100px 100px #888888;
+}
+
+.add_box_shadow {
+  box-shadow: 5px 5px 30px -10px #888888;
+}

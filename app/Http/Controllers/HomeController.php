@@ -40,18 +40,20 @@ class HomeController extends Controller
         $posts = Post::where('title', 'like', "%" . $query . "%")->
             orWhere('abstract', 'like', "%" . $query . "%")->
             orWhere('content', 'like', "%" . $query . "%")
-            ->orderBy('created_at')->get();
+            ->orderBy('created_at', 'DESC')->get();
         $searchMessage = "Showing " . count($posts) .
             (count($posts) == 1 ? " result " : " results ") . " for '" . $query . "': ";
       } else {
-        $posts = Post::orderBy('created_at')->get();
+        $posts = Post::orderBy('created_at', 'DESC')->get();
         $num = count($posts);
       }
       return view('posts', compact('posts', 'searchMessage'));
     }
 
     public function displayPost($post_id) {
-      $post = Post::find($post_id)->get()[0];
+      $post = Post::find($post_id);
+      $post->views += 1;
+      $post->save();
       return view('post', compact('post'));
     }
 }
