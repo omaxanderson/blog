@@ -1,0 +1,7 @@
+TODO
+
+  - fix CSS conflicts
+    - just use Bootstrap 4
+  - figure out the admin creating new post thing
+  - implement a post search feature
+  - begin using the tags
