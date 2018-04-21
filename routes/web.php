@@ -28,6 +28,8 @@ Route::get('/contact', function() {
 Route::get('/posts', "HomeController@showPostPage")->middleware('guest');
 Route::get('/posts/{postId}', "HomeController@displayPost");
 Route::get('/search', "HomeController@showPostPage");
+//Route::get('/submitComment', function() { return view('home'); });
+Route::post('/submitComment', "HomeController@submitComment");
 
 Auth::routes();
 Route::get('/admin', function() {

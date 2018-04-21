@@ -18,12 +18,16 @@
     <link href="{{ asset('css/mycss.css') }}" rel="stylesheet">
     <script src="{{ asset('js/posts.js') }}" type="text/javascript"></script>
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:200|Cormorant+Garamond|Crimson+Text|Lora|Pompiere" rel="stylesheet">
+
+
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-nav navbar-expand-sm navbar-dark bg-dark justify-content-between sticky-top">
+        <nav class="navbar navbar-nav navbar-expand-sm navbar-dark bg-dark justify-content-between sticky-top garamond-text">
             <!-- Branding Image -->
-            <a class="navbar-brand ml-3" href="{{ url('/posts') }}">Max's Website</a>
+            <a class="navbar-brand ml-3 " href="{{ url('/posts') }}">A Coder's Life</a>
 
             <div class='collapse navbar-collapse d-flex justify-content-end'>
               <ul class='navbar-nav'>
@@ -40,7 +44,7 @@
             </div>
 
         </nav>
-        <div class='container mt-3'>
+        <div class='container mt-3 garamond-text'>
           @yield('content')
         </div>
     </div>

@@ -18,7 +18,7 @@ class CreateCommentsTable extends Migration
             $table->increments('id');
             $table->string('author');
             $table->text('content');
-            $table->date('date');
+            $table->datetime('date');
 
             // Foreign keys
             $table->integer('post_id');

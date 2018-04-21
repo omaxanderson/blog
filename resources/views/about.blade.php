@@ -19,6 +19,8 @@
 
     <p>Then I tried to write a program in C and everything came crashing down around me.</p>
 
+    <img src="{{ asset('images/code1.jpg') }}" class='float-left col-sm-8'>
+
     <p>Just kidding, C was tough but learning how a program interacted with the hardware
       was just another fascinating thing to figure out. Seg faults still haunt my hopes and dreams
       but fortunately I think that's part of the learning process.</p>
