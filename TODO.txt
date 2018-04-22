@@ -13,6 +13,7 @@ TODO
   - database backup functionality
     - write a program that makes a mysqldump every day or so?
   - make it mobile-friendly
+  - include the overall layout in the app.blade.php instead of each individual page
 
 DONE
   - fix CSS conflicts

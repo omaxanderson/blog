@@ -20,6 +20,18 @@ body {
   background-color: #DDDDDD;
 }
 
+.card {
+  border-color: #999999;
+}
+
+.post-quotation {
+  font-size: 160%;
+  border-left: 2px solid #0086b3;
+  padding-left: 5%;
+  margin-bottom: 5%;
+  margin-top:5%;
+}
+
 .main-section {
   background-color: white;
   height: 100%;

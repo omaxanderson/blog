@@ -1,9 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class='col-sm-10 offset-sm-1 main-section mt-0 pt-5'>
+<!-- <div class='col-sm-10 offset-sm-1 main-section mt-0 pt-5'>
   <div class='col-sm-10 offset-sm-1'>
-  <h3 class='mb-5 d-flex justify-content-center'>Posts</h3>
+  -->
+  <h2 class='mb-5 d-flex justify-content-center'>Posts</h2>
   <p id='searchMessage'>{{ $searchMessage }}</p>
 
   @php
@@ -26,7 +27,7 @@
       echo "<p class='mb-0'>";
       echo $post->abstract;
 //      echo "</p></div><ul class='list-group list-group-flush'><li class='list-group-item'>";
-      echo "</p><hr class='mt-4 mb-1'>";
+      echo "</p><hr class='mt-4 mb-3'><p class='text-secondary mb-1'>";
       echo $post->read_time;
       echo $post->read_time == 1 ? " min" : " mins";
       echo " | ";
@@ -34,11 +35,13 @@
       echo $post->views == 1 ? " view" : " views";
       echo " | ";
       echo count(App\Comment::where('post_id', $post->id)->get());
-      echo (count(App\Comment::where('post_id', $post->id)->get()) == 1 ? " comment" : " comments") . "</div></div>";
+      echo (count(App\Comment::where('post_id', $post->id)->get()) == 1 ? " comment" : " comments") . "</p></div></div>";
       echo "</a>";
     }
 
   @endphp
+<!--
 </div>
 </div>
+-->
 @endsection

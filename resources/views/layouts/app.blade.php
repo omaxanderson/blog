@@ -27,7 +27,7 @@
     <div id="app">
         <nav class="navbar navbar-nav navbar-expand-sm navbar-dark bg-dark justify-content-between sticky-top garamond-text">
             <!-- Branding Image -->
-            <a class="navbar-brand ml-3 " href="{{ url('/posts') }}">A Coder's Life</a>
+            <a class="navbar-brand ml-3 " href="{{ url('/') }}">A Coder's Life</a>
 
             <div class='collapse navbar-collapse d-flex justify-content-end'>
               <ul class='navbar-nav'>
@@ -45,7 +45,11 @@
 
         </nav>
         <div class='container garamond-text'>
-          @yield('content')
+          <div class='col-sm-10 offset-sm-1 main-section mt-0 pt-5'>
+            <div class='col-sm-10 offset-sm-1'>
+              @yield('content')
+            </div>
+          </div>
         </div>
     </div>
 

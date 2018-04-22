@@ -20,17 +20,20 @@ class HomeController extends Controller
     "A Superb Owl",
     "The Dude",
     "Vim > Emacs",
-    "Sidney Crosby",
-    "Wayne Gretzky",
-    "Nicolas Cage",
     "An Adorable Hamster",
-    "Bill Gates",
     "Edward Macaroni Fork",
     ",.-*'*-.,xxXSegFaultXxx,.-*'*-.,",
     "My Favorite IDE is Microsoft Word",
     "The E Street Band",
     "Totally Not A Robot. Beep Boop.",
-    "<script>alert('hello world!');</script>"
+    "<script>alert('hello world!');</script>",
+    "Jebediah Kerman",
+    "BB-8",
+    "Jar Jar Binks",
+    "Arya Stark",
+    "Danerys Stormborn",
+    "I Cried at the Red Wedding",
+    "Little Bobby Tables"
   ];
 
     /**

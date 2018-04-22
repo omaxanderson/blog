@@ -2,9 +2,6 @@
 
 @section('content')
 
-<div class='col-sm-10 offset-sm-1 main-section mt-0 pt-5'>
-  <div class='col-sm-10 offset-sm-1'>
-
   <h3 class='d-flex justify-content-center mb-5'>
     {{ $post->title }}
   </h3>
@@ -26,7 +23,7 @@
     {{ csrf_field() }}
     <input type='text' name='post_id' value='{{ $post->id }}' hidden>
     <div class='form-group'>
-      <label for='name'>Name (you can leave this blank and your comment will be displayed with a random, anonymous username)</label>
+      <label for='name'>Name (leave this blank for a random, anonymous name)</label>
       <input type='text' class='form-control' name='name' placeholder='Name'>
     </div>
     <div class='form-group'>
@@ -53,6 +50,4 @@
 
   <!-- bottom buffer -->
   <div style='display:block; height:30px'></div>
-</div>
-</div>
 @endsection

@@ -2,9 +2,7 @@
 
 @section('content')
 
-  <div class='col-sm-8 offset-sm-2'>
-
-    <h1 class='mb-3'>About Me</h1>
+    <h1 class='mb-5 d-flex justify-content-center'>About Me</h1>
 
     <p>Hello! My name is O Max Anderson and I am currently a senior Computer Science
       major at Miami University. I'm on track to graduate in May and then I'll
@@ -57,6 +55,5 @@
     <span style='display:inline-block; width: 30px;'></span> <!-- Tab spacer -->
     <span>- Max</span>
     <div style='display:block; height:30px'></div>
-  </div>
 
 @endsection
