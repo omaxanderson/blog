@@ -34,7 +34,7 @@
       I don't feel like I've learned nearly enough. So I've decided to document my progress,
       keep track of projects, and share my experiences. </p>
 
-    <h5 class='mb-0 mt-3'>Hobbies</h5>
+    <h3 class='mb-2 mt-5'>Hobbies</h3>
     <p>Outside of coding, I have a similar passion for learning. I decided to learn
       how to play guitar during my senior year of high school, mostly because I wanted to play
       the songs I loved to listen to so much. Partly because I wanted to impress a girl.

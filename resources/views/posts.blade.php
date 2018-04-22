@@ -24,7 +24,16 @@
       echo "<div class='card-body'>";
       echo "<p class='mb-0'>";
       echo $post->abstract;
-      echo "</p></div></div>";
+//      echo "</p></div><ul class='list-group list-group-flush'><li class='list-group-item'>";
+      echo "</p><hr class='mt-4 mb-1'>";
+      echo $post->read_time;
+      echo $post->read_time == 1 ? " min" : " mins";
+      echo " | ";
+      echo $post->views;
+      echo $post->views == 1 ? " view" : " views";
+      echo " | ";
+      echo count(App\Comment::where('post_id', $post->id)->get());
+      echo (count(App\Comment::where('post_id', $post->id)->get()) == 1 ? " comment" : " comments") . "</div></div>";
       echo "</a>";
     }
 

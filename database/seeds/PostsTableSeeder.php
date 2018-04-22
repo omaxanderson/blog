@@ -19,7 +19,8 @@ class PostsTableSeeder extends Seeder
           'content'=>'Here\'s all kinds of content, here we go nice look at all these words quite a post',
           'created_at'=>'2018-04-01',
           'user_id'=>1,
-          'views'=>0
+          'views'=>0,
+          'read_time'=>1
         ]);
         DB::table('posts')->insert([
           'id'=>22,
@@ -36,7 +37,8 @@ class PostsTableSeeder extends Seeder
 <p>Curabitur volutpat diam felis, at hendrerit nulla pretium ac. Donec mollis ante eu facilisis scelerisque. In eget gravida ante, ac varius massa. Donec ullamcorper feugiat mi, non finibus risus pharetra sed. Sed imperdiet, nisl vel sagittis rhoncus, nisl tortor posuere dolor, in tempus risus metus quis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed convallis justo felis, eu condimentum odio laoreet eleifend. Ut sed diam a purus faucibus malesuada. Nam nec commodo erat.</p>',
           'created_at'=>'2018-04-02',
           'user_id'=>1,
-          'views'=>0
+          'views'=>0,
+          'read_time'=>3
         ]);
         DB::table('posts')->insert([
           'id'=>3,
@@ -53,7 +55,8 @@ class PostsTableSeeder extends Seeder
 <p>Curabitur volutpat diam felis, at hendrerit nulla pretium ac. Donec mollis ante eu facilisis scelerisque. In eget gravida ante, ac varius massa. Donec ullamcorper feugiat mi, non finibus risus pharetra sed. Sed imperdiet, nisl vel sagittis rhoncus, nisl tortor posuere dolor, in tempus risus metus quis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed convallis justo felis, eu condimentum odio laoreet eleifend. Ut sed diam a purus faucibus malesuada. Nam nec commodo erat.</p>',
           'created_at'=>'2018-04-03',
           'user_id'=>1,
-          'views'=>0
+          'views'=>0,
+          'read_time'=>3
         ]);
 
     }

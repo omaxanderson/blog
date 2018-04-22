@@ -1,7 +1,13 @@
 TODO
 
+  - figure out the admin creating new post thing
+  - begin using the tags
+  - make the post page look nicer
+    - maybe add number of comments on the preview
+  - important quotation section where some nice quote is repeated, large, and quotationed(sp???)
+  - some criteria like "1 min read", "5 min read", etc
+  - email notification list for post updates
+
+DONE
   - fix CSS conflicts
     - just use Bootstrap 4
-  - figure out the admin creating new post thing
-  - implement a post search feature
-  - begin using the tags
