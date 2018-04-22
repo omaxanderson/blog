@@ -7,6 +7,10 @@ TODO
   - important quotation section where some nice quote is repeated, large, and quotationed(sp???)
   - some criteria like "1 min read", "5 min read", etc
   - email notification list for post updates
+  - think of more funny anonymous names
+  - form validation for comment submission
+  - asap fix js injection
+  - database backup functionality
 
 DONE
   - fix CSS conflicts

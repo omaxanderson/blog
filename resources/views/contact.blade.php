@@ -11,6 +11,8 @@
 
 <p>Phone: (612) 236-7330</p>
 
+<p>You can also find me on <a href='https://www.linkedin.com/in/o-maxwell-anderson'>LinkedIn</a>.</p>
+
 </div>
 
 @endsection

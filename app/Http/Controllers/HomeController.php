@@ -9,6 +9,30 @@ use App\Comment;
 
 class HomeController extends Controller
 {
+
+  public $randomNames = [
+    "Bigfoot",
+    "The Loch Ness Monster",
+    "Your Friendly Neighborhood Yeti",
+    "John von Neumann",
+    "Alan Turing",
+    "Siri",
+    "A Superb Owl",
+    "The Dude",
+    "Vim > Emacs",
+    "Sidney Crosby",
+    "Wayne Gretzky",
+    "Nicolas Cage",
+    "An Adorable Hamster",
+    "Bill Gates",
+    "Edward Macaroni Fork",
+    ",.-*'*-.,xxXSegFaultXxx,.-*'*-.,",
+    "My Favorite IDE is Microsoft Word",
+    "The E Street Band",
+    "Totally Not A Robot. Beep Boop.",
+    "<script>alert('hello world!');</script>"
+  ];
+
     /**
      * Create a new controller instance.
      *
@@ -58,18 +82,20 @@ class HomeController extends Controller
       $post->save();
 
       // retrieve comments
-      $comments = Comment::where('post_id', $post_id)->get();
+      $comments = Comment::where('post_id', $post_id)->orderBy('date', 'DESC')->get();
       return view('post', compact('post', 'comments'));
     }
 
     public function submitComment(Request $request) {
       date_default_timezone_set('America/Indiana/Indianapolis');
       $comment = new Comment();
-      $comment->author = "";
       if (strlen($request->name) > 0) {
-        $comment->author = $request->name;
+        $comment->author = htmlspecialchars($request->name);
+      } else {
+        $randInt = rand(0, count($this->randomNames) - 1);
+        $comment->author = $this->randomNames[$randInt];
       }
-      $comment->content = $request->comment;
+      $comment->content = htmlspecialchars($request->comment);
       $comment->post_id = $request->post_id;
       $comment->date = date('Y:m:d H:i:s');
       $comment->save();

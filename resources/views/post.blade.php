@@ -25,7 +25,7 @@
     {{ csrf_field() }}
     <input type='text' name='post_id' value='{{ $post->id }}' hidden>
     <div class='form-group'>
-      <label for='name'>Name</label>
+      <label for='name'>Name (you can leave this blank and your comment will be displayed with a random, anonymous username)</label>
       <input type='text' class='form-control' name='name' placeholder='Name'>
     </div>
     <div class='form-group'>
