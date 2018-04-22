@@ -2,9 +2,10 @@
 
 @section('content')
 
-<div class='col-sm-8 offset-sm-2'>
+<div class='col-sm-10 offset-sm-1 main-section mt-0 pt-5'>
+  <div class='col-sm-10 offset-sm-1'>
 
-  <h3 class='d-flex justify-content-center my-5'>
+  <h3 class='d-flex justify-content-center mb-5'>
     {{ $post->title }}
   </h3>
 
@@ -52,6 +53,6 @@
 
   <!-- bottom buffer -->
   <div style='display:block; height:30px'></div>
-
+</div>
 </div>
 @endsection

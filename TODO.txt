@@ -11,6 +11,8 @@ TODO
   - form validation for comment submission
   - asap fix js injection
   - database backup functionality
+    - write a program that makes a mysqldump every day or so?
+  - make it mobile-friendly
 
 DONE
   - fix CSS conflicts

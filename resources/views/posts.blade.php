@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class='col-sm-8 offset-sm-2'>
-  <h3 class='my-5'>Posts</h3>
+<div class='col-sm-10 offset-sm-1 main-section mt-0 pt-5'>
+  <div class='col-sm-10 offset-sm-1'>
+  <h3 class='mb-5 d-flex justify-content-center'>Posts</h3>
   <p id='searchMessage'>{{ $searchMessage }}</p>
 
   @php
@@ -38,5 +39,6 @@
     }
 
   @endphp
+</div>
 </div>
 @endsection

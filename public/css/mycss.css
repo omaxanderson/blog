@@ -12,6 +12,20 @@
   box-shadow: 5px 5px 30px -10px #888888;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #DDDDDD;
+}
+
+.main-section {
+  background-color: white;
+  height: 100%;
+  box-shadow: 0px 0px 25px -3px #888888;
+}
+
 .lora-text {
   font-family: 'Lora', serif;
   font-size: 110%;

@@ -44,7 +44,7 @@
             </div>
 
         </nav>
-        <div class='container mt-3 garamond-text'>
+        <div class='container garamond-text'>
           @yield('content')
         </div>
     </div>
