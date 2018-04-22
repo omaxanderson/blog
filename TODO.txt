@@ -1,6 +1,7 @@
 TODO
 
   - figure out the admin creating new post thing
+  - recent posts tag at the bottom of the article
   - begin using the tags
   - make the post page look nicer
     - maybe add number of comments on the preview
