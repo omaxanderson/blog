@@ -41,6 +41,7 @@
               <form class='form-inline ml-3' action='/search' method='get'>
                 <input class='form-control mr-2' type='search' name='q' placeholder='Search posts' aria-label='Search posts'>
                 <button class='btn btn-outline-info' type='submit'>Search</button>
+              </form>
             </div>
 
         </nav>

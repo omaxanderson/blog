@@ -25,7 +25,7 @@ Route::get('/contact', function() {
   return view('contact');
 });
 
-Route::get('/posts', "HomeController@showPostPage")->middleware('guest');
+Route::get('/posts', "HomeController@showPostPage");
 Route::get('/posts/{postId}', "HomeController@displayPost");
 Route::get('/search', "HomeController@showPostPage");
 //Route::get('/submitComment', function() { return view('home'); });
@@ -36,4 +36,5 @@ Route::get('/admin', function() {
   // only authenticated can use this
   return view('adminDashboard');
 })->middleware('auth');
+Route::post('/uploadPost', "AdminController@uploadPost");
 ?>

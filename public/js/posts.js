@@ -1,4 +1,13 @@
 $(document).ready(function() {
+  function setHeight() {
+    $('.main-section').css('min-height', $(window).innerHeight() - $('.navbar').outerHeight());
+  }
+  setHeight();
+
+  $(window).resize(function() {
+    setHeight();
+  });
+
   $('.blog_post').hover(blogIn, blogOut);
 });
 
