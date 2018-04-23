@@ -21,6 +21,20 @@ class AdminController extends Controller {
     $this->middleware('auth');
   }
 
+  public function uploadPostForm(Request $request) {
+    $post = new Post();
+    $post->title = $request->title;
+    $post->abstract = $request->abstract;
+    $post->content = $request->content;
+    $post->user_id = $request->user_id;
+    $post->read_time = $request->read_time;
+    $post->views = 0;
+    $post->created_at = date("Y-m-d");
+    $post->save();
+    $uploadMessage = "<p class='text-success'>Successfully published post</p>";
+    return view('adminDashboard', compact('uploadMessage'));
+  }
+
   public function uploadPost(Request $request) {
     if (!Auth::check()) {
       return view('login');

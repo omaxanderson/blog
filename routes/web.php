@@ -37,4 +37,5 @@ Route::get('/admin', function() {
   return view('adminDashboard');
 })->middleware('auth');
 Route::post('/uploadPost', "AdminController@uploadPost");
+Route::post('/uploadPostForm', "AdminController@uploadPostForm");
 ?>
