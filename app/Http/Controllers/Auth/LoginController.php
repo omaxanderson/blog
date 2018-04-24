@@ -44,10 +44,10 @@ class LoginController extends Controller
         $creds = $request->only('username', 'password');
 
         if (Auth::attempt($creds)) {
-          return redirect()->intended('adminDashboard');
+          return redirect()->intended('posts');
         }
       } else {
-        return redirect()->intended('adminDashboard');
+        return redirect()->intended('login');
       }
 
     }

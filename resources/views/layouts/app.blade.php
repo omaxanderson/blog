@@ -31,6 +31,13 @@
 
             <div class='collapse navbar-collapse d-flex justify-content-end'>
               <ul class='navbar-nav'>
+                @php
+                  if (Auth::check()) {
+                    echo "<li class='nav-item mx-2'>
+                            <a class='nav-link' href='/admin'>Dashboard</a>
+                          </li>";
+                  }
+                @endphp
                 <li class='nav-item mx-2'>
                   <a class='nav-link' href='/about'>About</a>
                 </li>

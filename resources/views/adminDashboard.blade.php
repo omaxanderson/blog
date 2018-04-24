@@ -15,11 +15,6 @@
 
     </form>
   </div>
-  <div class='col-sm-6 d-flex justify-content-end'>
-    <a href='/editPosts'>
-      <button class='btn btn-primary'>Edit Posts</button>
-    </a>
-  </div>
 </div>
 
 @php
