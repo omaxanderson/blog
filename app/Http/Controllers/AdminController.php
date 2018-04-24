@@ -21,7 +21,33 @@ class AdminController extends Controller {
     $this->middleware('auth');
   }
 
+  // I think I should get rid of this
+  public function showEditPosts() {
+    $posts = Post::orderBy('created_at', 'DESC')->get();
+    return view('editPosts', compact('posts'));
+  }
+
+  public function showPostEdit(Request $request) {
+    $post = Post::find($request->post_id);
+    return view('editPost', compact('post'));
+  }
+
+  public function processEdit(Request $request) {
+    $post = Post::find($request->post_id);
+    $post->title = $request->title;
+    $post->abstract = $request->abstract;
+    $post->content = $request->content;
+    $post->user_id = $request->user_id;
+    $post->read_time = $request->read_time;
+    $post->updated_at = date("Y-m-d");
+    $post->save();
+    return redirect('/posts/' . $post->id);
+  }
+
   public function uploadPostForm(Request $request) {
+    if (!Auth::check()) {
+      return view('login');
+    }
     $post = new Post();
     $post->title = $request->title;
     $post->abstract = $request->abstract;

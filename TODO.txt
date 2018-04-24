@@ -1,12 +1,10 @@
 TODO
 
-  - figure out the admin creating new post thing
+  - admin post editing function
+  - post draft saving (otherwise you have to write a post before session expiration...)
   - recent posts tag at the bottom of the article
+  - email notification to myself whenever a post is viewed/commented on
   - begin using the tags
-  - make the post page look nicer
-    - maybe add number of comments on the preview
-  - important quotation section where some nice quote is repeated, large, and quotationed(sp???)
-  - some criteria like "1 min read", "5 min read", etc
   - email notification list for post updates
   - think of more funny anonymous names
   - form validation for comment submission
@@ -14,8 +12,13 @@ TODO
   - database backup functionality
     - write a program that makes a mysqldump every day or so?
   - make it mobile-friendly
-  - include the overall layout in the app.blade.php instead of each individual page
 
 DONE
   - fix CSS conflicts
     - just use Bootstrap 4
+  - include the overall layout in the app.blade.php instead of each individual page
+  - some criteria like "1 min read", "5 min read", etc
+  - important quotation section where some nice quote is repeated, large, and quotationed(sp???)
+  - make the post page look nicer
+    - maybe add number of comments on the preview
+  - figure out the admin creating new post thing

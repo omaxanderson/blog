@@ -31,6 +31,7 @@ Route::get('/search', "HomeController@showPostPage");
 //Route::get('/submitComment', function() { return view('home'); });
 Route::post('/submitComment', "HomeController@submitComment");
 
+// Routes that require authorization
 Auth::routes();
 Route::get('/admin', function() {
   // only authenticated can use this
@@ -38,4 +39,7 @@ Route::get('/admin', function() {
 })->middleware('auth');
 Route::post('/uploadPost', "AdminController@uploadPost");
 Route::post('/uploadPostForm', "AdminController@uploadPostForm");
+Route::get('/editPosts', "AdminController@showEditPosts");
+Route::get('/editPost', "AdminController@showPostEdit");
+Route::post('/editPostSubmit', "AdminController@processEdit");
 ?>

@@ -2,11 +2,29 @@
 
 @section('content')
 
-  <h3 class='d-flex justify-content-center mb-5'>
+<div class='d-flex justify-content-between'>
+  <h3 class='col-sm-6 offset-sm-3 mb-5 d-flex justify-content-center'>
     {{ $post->title }}
   </h3>
+  @php
+    if (Auth::check()) {
+      echo "<div class='col-sm-3 d-flex justify-content-end'><form action='/editPost' method='GET'>";
+      echo csrf_field();
+      echo "<input name='post_id' value='" . $post->id . "' hidden>";
+      echo "<a href='/editPost'><button class='btn btn-primary'>Edit Post</button></a>";
+      echo "</form></div>";
+    }
+  @endphp
+</div>
 
   @php
+    if (isset($uploadMsg)) {
+      echo $uploadMsg;
+    }
+  @endphp
+
+  @php
+  // Don't use the blade shorthand, it doesn't work for this
   echo $post->content;
   @endphp
 

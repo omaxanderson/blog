@@ -3,15 +3,24 @@
 @section('content')
 <h3 class='d-flex justify-content-center'>Admin Dashboard</h3>
 
-<form action='/uploadPost' method='POST' enctype="multipart/form-data">
-  {{ csrf_field() }}
-  <div class='form-group'>
-    <label for='file-upload'>File</label><br>
-    <input class='form-control col-sm-4' type='file' name='file-upload' accept='.html,.txt'>
-    <button type='submit' class='btn btn-primary mt-2' value='submit'>Submit</button>
-  </div>
+<div class='row'>
+  <div class='col-sm-6'>
+    <form action='/uploadPost' method='POST' enctype="multipart/form-data">
+      {{ csrf_field() }}
+      <div class='form-group'>
+        <label for='file-upload'>File</label><br>
+        <input class='form-control' type='file' name='file-upload' accept='.html,.txt'>
+        <button type='submit' class='btn btn-primary mt-2' value='submit'>Submit</button>
+      </div>
 
-</form>
+    </form>
+  </div>
+  <div class='col-sm-6 d-flex justify-content-end'>
+    <a href='/editPosts'>
+      <button class='btn btn-primary'>Edit Posts</button>
+    </a>
+  </div>
+</div>
 
 @php
   if (isset($uploadMessage)) {
@@ -42,10 +51,12 @@
   </div>
   <div class='form-group mt-2'>
     <label for='content'>Content (note: must include tags)</label>
-    <textarea class='form-control' name='content' rows='10' placeholder='Content'></textarea>
+    <textarea class='form-control' name='content' rows='25' placeholder='Content'></textarea>
   </div>
   <button type='submit' class='btn btn-primary' value='submit'>Publish</button>
 </form>
+
+<div style='height: 20px'></div>
 
 
 @endsection
