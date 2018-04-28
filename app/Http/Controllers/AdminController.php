@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Storage;
 
 use App\Post;
+use App\Draft;
 
 class AdminController extends Controller {
 
@@ -32,8 +33,37 @@ class AdminController extends Controller {
     return view('editPost', compact('post'));
   }
 
+  public function saveDraft(Request $request) {
+    $draft = new Draft();
+    $draft->title = $request->title;
+    $draft->abstract = $request->abstract;
+    $draft->read_time = $request->readTime;
+    $draft->content = $request->content;
+    $draft->user_id = $request->userId;
+    $draft->save();
+    return $draft;
+    try {
+      $draft->save();
+    } catch (Exception $e) {
+      return $e;
+    }
+
+    /*
+    */
+  //  $json = json_encode(array(status: 'ok'));
+
+    return 'ok';
+//    return json_encode(array('status': 'ok'));
+  }
+
   public function processEdit(Request $request) {
     $post = Post::find($request->post_id);
+
+    if ($request->submit == "delete") {
+      $post->delete();
+      return redirect('/');
+    }
+
     $post->title = $request->title;
     $post->abstract = $request->abstract;
     $post->content = $request->content;
@@ -139,6 +169,11 @@ class AdminController extends Controller {
     $post->save();
 //    $post->abstract
     return "\"" . $title . "\" successfully uploaded!";
+  }
+
+  public function logout() {
+    Auth::logout();
+    return redirect('/posts');
   }
 
 }

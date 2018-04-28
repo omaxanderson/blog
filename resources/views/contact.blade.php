@@ -2,8 +2,8 @@
 
 @section('content')
 
-<div class='col-sm-6 offset-sm-3'>
-<h1 class='mb-3'>Contact Me</h1>
+<div class='col-sm-10 offset-sm-1'>
+<h3 class='mb-3 d-flex justify-content-center'>Contact Me</h3>
 
 <p>Email: <a href='mailto:omaxwellanderson@gmail.com'>
   omaxwellanderson@gmail.com</a>
@@ -11,7 +11,7 @@
 
 <p>Phone: (612) 236-7330</p>
 
-<p>You can also find me on <a href='https://www.linkedin.com/in/o-maxwell-anderson'>LinkedIn</a>.</p>
+<p>LinkedIn: <a href='https://www.linkedin.com/in/o-maxwell-anderson'>www.linkedin.com/in/o-maxwell-anderson</a></p>
 
 </div>
 

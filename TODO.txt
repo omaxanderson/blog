@@ -1,14 +1,10 @@
 TODO
 
-  - admin post editing function
   - post draft saving (otherwise you have to write a post before session expiration...)
   - recent posts tag at the bottom of the article
   - email notification to myself whenever a post is viewed/commented on
   - begin using the tags
   - email notification list for post updates
-  - think of more funny anonymous names
-  - form validation for comment submission
-  - asap fix js injection
   - database backup functionality
     - write a program that makes a mysqldump every day or so?
   - make it mobile-friendly
@@ -22,3 +18,6 @@ DONE
   - make the post page look nicer
     - maybe add number of comments on the preview
   - figure out the admin creating new post thing
+  - asap fix js injection
+  - admin post editing function
+  - form validation for comment submission

@@ -42,4 +42,6 @@ Route::post('/uploadPostForm', "AdminController@uploadPostForm");
 Route::get('/editPosts', "AdminController@showEditPosts");
 Route::get('/editPost', "AdminController@showPostEdit");
 Route::post('/editPostSubmit', "AdminController@processEdit");
+Route::post('/saveDraft', "AdminController@saveDraft");
+Route::get('/logout', "AdminController@logout");
 ?>

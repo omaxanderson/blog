@@ -33,9 +33,12 @@
       <label for='content'>Content (note: must include tags)</label>
       <textarea class='form-control' name='content' rows='25' >{{ $post->content }}</textarea>
     </div>
-    <button type='submit' class='btn btn-primary' value='submit'>Save Changes</button>
+    <button type='submit' class='btn btn-primary' name='submit' value='submit'>Save Changes</button>
+    <button id='deletePostButton' type='submit' class='btn btn-danger' name='submit' value='delete'>Delete Post</button>
   </form>
 
   <div style='height:20px'></div>
+
+  <script src="{{ asset('js/editPost.js') }}" type="text/javascript"></script>
 
 @endsection
