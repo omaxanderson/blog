@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 use App\Post;
@@ -80,9 +81,11 @@ class HomeController extends Controller
 
     public function displayPost($post_id) {
       $post = Post::find($post_id);
-      // update views
-      $post->views += 1;
-      $post->save();
+      // update views if not admin
+      if (!Auth::check()) {
+        $post->views += 1;
+        $post->save();
+      }
 
       // retrieve comments
       $comments = Comment::where('post_id', $post_id)->orderBy('date', 'DESC')->get();

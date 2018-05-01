@@ -1,6 +1,9 @@
 TODO
 
   - post draft saving (otherwise you have to write a post before session expiration...)
+    - heres an idea: drafts can be hidden from anyone without authentication in the main
+      /posts page, but admin can see the post draft and therefore have the option to edit it
+  - when you edit a post, reflect that edit in the file that was uploaded to create that post
   - recent posts tag at the bottom of the article
   - email notification to myself whenever a post is viewed/commented on
   - begin using the tags
