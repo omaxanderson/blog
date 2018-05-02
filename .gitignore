@@ -12,3 +12,4 @@ yarn-error.log
 .env
 database/seeds/UsersTableSeeder.php
 daily_backup.sh
+/database_backups
