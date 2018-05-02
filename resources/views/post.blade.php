@@ -3,7 +3,7 @@
 @section('content')
 
 <div class='d-flex justify-content-between'>
-  <h3 class='col-sm-6 offset-sm-3 mb-5 d-flex justify-content-center'>
+  <h3 class='col-sm-10 offset-sm-1 mb-5 d-flex justify-content-center'>
     {{ $post->title }}
   </h3>
   @php

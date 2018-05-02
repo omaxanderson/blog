@@ -23,6 +23,8 @@
   }
 @endphp
 
+<hr>
+
 <form action='/uploadPostForm' method='POST'>
   {{ csrf_field() }}
   <div class='form-group'>

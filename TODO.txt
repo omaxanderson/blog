@@ -8,8 +8,6 @@ TODO
   - email notification to myself whenever a post is viewed/commented on
   - begin using the tags
   - email notification list for post updates
-  - database backup functionality
-    - write a program that makes a mysqldump every day or so?
   - make it mobile-friendly
 
 DONE
@@ -24,3 +22,5 @@ DONE
   - asap fix js injection
   - admin post editing function
   - form validation for comment submission
+  - database backup functionality
+    - write a program that makes a mysqldump every day or so?
