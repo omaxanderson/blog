@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>A Coder's Life</title>
+    <title>Code Canoe</title>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -44,35 +44,42 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-nav navbar-expand-sm navbar-dark bg-dark justify-content-between sticky-top garamond-text">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark"> <!-- justify-content-between sticky-top garamond-text"> -->
             <!-- Branding Image -->
-            <a class="navbar-brand ml-3 " href="{{ url('/') }}">Code</a>
+            <a class="navbar-brand ml-3 " href="{{ url('/') }}">{ CodeCanoe }</a>
 
-            <div class='collapse navbar-collapse d-flex justify-content-end'>
-              <ul class='navbar-nav'>
+	<!-- toggler button -->
+	<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarToggleItems'>
+		<span class='navbar-toggler-icon'></span>
+	</button>
+
+            <div id='navbarToggleItems' class='collapse navbar-collapse'> <!--  d-flex justify-content-end'> -->
+              <ul class='navbar-nav ml-auto'>
                 @php
                   if (Auth::check()) {
-                    echo "<li class='nav-item mx-2'>
-                            <a class='nav-link' href='/admin'>Dashboard</a>
+                    echo "<li class='nav-item mx-2 d-flex justify-content-sm-center'>
+                            <a class='nav-link d-flex justify-content-center' href='/admin'>Dashboard</a>
                           </li>";
                     echo "<li class='nav-item mx-2'>
-                            <a class='nav-link' href='/logout'>Logout</a>
+                            <a class='nav-link d-flex justify-content-center' href='/logout'>Logout</a>
                           </li>";
                   }
                 @endphp
                 <li class='nav-item mx-2'>
-                  <a class='nav-link' href='/posts'>Posts</a>
+                  <a class='nav-link d-flex justify-content-center' href='/posts'>Posts</a>
                 </li>
                 <li class='nav-item mx-2'>
-                  <a class='nav-link' href='/about'>About</a>
+                  <a class='nav-link d-flex justify-content-center' href='/about'>About</a>
                 </li>
                 <li class='nav-item mx-2'>
-                  <a class='nav-link' href='/contact'>Contact</a>
+                  <a class='nav-link d-flex justify-content-center' href='/contact'>Contact</a>
                 </li>
               </ul>
               <form class='form-inline ml-3' action='/search' method='get'>
                 <input class='form-control mr-2' type='search' name='q' placeholder='Search posts' aria-label='Search posts'>
-                <button class='btn btn-outline-info' type='submit'>Search</button>
+		<div class='mx-auto mt-3 mt-sm-0'>
+			<button class='btn btn-outline-info' type='submit'>Search</button>
+		</div>
               </form>
             </div>
 

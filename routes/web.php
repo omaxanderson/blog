@@ -11,6 +11,11 @@
 |
 */
 
+// Used very briefly to add myself to the database with the correct hash
+//Route::get('/register', function() {
+//	return view('register');
+//});
+
 Route::get('/', "HomeController@showPostPage");
 
 Route::get('/home', function() {
